@@ -33,8 +33,9 @@ function PetList(props) {
           })
 
           .map((pet,idx) =>
-            <SinglePet  pet={pet} key={idx}  />
-          )}
+            <SinglePet pet={pet} key={idx} />
+          )
+          }
       </div>
 
     </>

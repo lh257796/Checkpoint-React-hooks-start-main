@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 function SinglePet(props) {
 
   const [adopted, setadopted] = React.useState(false);
@@ -9,13 +10,13 @@ function SinglePet(props) {
   }
 
   return (
-    <div className={`single-pet`}>
+    <div className={adopted ? "single-pet "+returnStatus:"single-pet"}>
       <h2>Name: {props.pet.name}</h2>
-      <p>Description: {props.pet.description}</p>
+      <p><em> {props.pet.description} </em></p>
       <p>Species: {props.pet.species}</p>
       <p>Adoption Status: {adopted ? "Already adopted...":"Available!"}</p>
       <div>
-        <button className={"singlepet "+returnStatus()} onClick={() => setadopted(!adopted)}>
+        <button className={"single-pet "+returnStatus()} onClick={() => setadopted(!adopted)}>
           {adopted ? "Already adopted...":"Available!"}
           </button>
       </div>
